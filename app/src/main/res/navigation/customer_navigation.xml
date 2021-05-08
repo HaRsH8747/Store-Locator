@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/customer_navigation"
+    app:startDestination="@id/customer_navigation_home">
+
+    <fragment
+        android:id="@+id/customer_navigation_home"
+        android:name="com.example.storelocator.customerLogin.home.CustomerHomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_customer_home" >
+        <action
+            android:id="@+id/action_customer_navigation_home_to_customerProductDetailFragment"
+            app:destination="@id/customerProductDetailFragment" />
+        <action
+            android:id="@+id/action_customer_navigation_home_to_nearbyProductListFragment"
+            app:destination="@id/nearbyProductListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/customer_navigation_product_list"
+        android:name="com.example.storelocator.customerLogin.productList.CustomerProductListFragment"
+        android:label="@string/title_product_list"
+        tools:layout="@layout/fragment_customer_product_list">
+        <action
+            android:id="@+id/action_customer_navigation_product_list_to_customerProductDetailFragment"
+            app:destination="@id/customerProductDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/customer_navigation_profile"
+        android:name="com.example.storelocator.customerLogin.profile.CustomerProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_customer_profile" />
+    <fragment
+        android:id="@+id/customerProductDetailFragment"
+        android:name="com.example.storelocator.customerLogin.productList.CustomerProductDetailFragment"
+        android:label="@string/Product_Details"
+        tools:layout="@layout/fragment_customer_product_detail">
+        <action
+            android:id="@+id/action_customerProductDetailFragment_to_QRScannerFragment"
+            app:destination="@id/QRScannerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/QRScannerFragment"
+        android:name="com.example.storelocator.customerLogin.qrCodeFiles.QRScannerFragment"
+        android:label="@string/Scan_QR_Code"
+        tools:layout="@layout/fragment_q_r_scanner">
+        <action
+            android:id="@+id/action_QRScannerFragment_to_customerProductDetailFragment"
+            app:destination="@id/customerProductDetailFragment"
+            app:popUpTo="@id/customerProductDetailFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/nearbyProductListFragment"
+        android:name="com.example.storelocator.customerLogin.home.NearbyProductListFragment"
+        android:label="@string/Nearby_Products"
+        tools:layout="@layout/fragment_nearby_product_list"/>
+</navigation>

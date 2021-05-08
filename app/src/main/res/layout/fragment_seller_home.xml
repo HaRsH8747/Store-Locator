@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_google_pixel_4__4xl___1"
+            android:padding="20dp"
+            tools:context=".sellerLogin.ui.home.SellerHomeFragment">
+
+            <ImageButton
+                android:id="@+id/imgbtnAddProduct"
+                android:layout_width="210dp"
+                android:layout_height="120dp"
+                android:background="@drawable/ic_button_background"
+                android:src="@drawable/ic_add_product__1_"
+                app:layout_constraintBottom_toTopOf="@+id/imgbtnEditProduct"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/imgbtnEditProduct"
+                android:layout_width="210dp"
+                android:layout_height="120dp"
+                android:background="@drawable/ic_button_background"
+                android:src="@drawable/ic_edit_product"
+                app:layout_constraintBottom_toTopOf="@+id/imgbtnPurchaseHistory"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgbtnAddProduct" />
+
+            <ImageButton
+                android:id="@+id/imgbtnPurchaseHistory"
+                android:layout_width="210dp"
+                android:layout_height="120dp"
+                android:background="@drawable/ic_button_background"
+                android:src="@drawable/ic_purchase_history"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgbtnEditProduct" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

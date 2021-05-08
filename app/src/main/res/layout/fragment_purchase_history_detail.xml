@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_google_pixel_4__4xl___1"
+    android:padding="10dp"
+    tools:context=".sellerLogin.ui.home.purchasehistory.PurchaseHistoryDetailFragment">
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/product_name"
+        android:textColor="@color/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_marginStart="45dp"
+        android:text="Bus"
+        android:textColor="@color/colorOnPrimary"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toTopOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="20dp"
+        android:text="@string/product_price2"
+        android:textColor="@color/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/tvProductPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="100"
+        android:textColor="@color/colorOnPrimary"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/tvProductName"
+        app:layout_constraintTop_toTopOf="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="20dp"
+        android:text="@string/discount"
+        android:textColor="@color/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/tvDiscount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="10"
+        android:textColor="@color/colorOnPrimary"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/tvProductPrice"
+        app:layout_constraintTop_toTopOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="25dp"
+        android:text="@string/discount_price"
+        android:textColor="@color/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/tvcDiscountPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="90"
+        android:textColor="@color/colorOnPrimary"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/tvDiscount"
+        app:layout_constraintTop_toTopOf="@+id/textView25" />
+
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="20dp"
+        android:text="@string/extra_offer2"
+        android:textColor="@color/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/textView25"
+        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+    <TextView
+        android:id="@+id/tvExtraOffer"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="Buy 1 get 1 free Buy 1 get 1 free Buy 1 get 1 free"
+        android:textColor="@color/colorOnPrimary"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/tvDiscount"
+        app:layout_constraintTop_toTopOf="@+id/textView15" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="20dp"
+        android:text="@string/quantity"
+        android:textColor="@color/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/tvExtraOffer" />
+
+    <TextView
+        android:id="@+id/tvquantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="1"
+        android:textColor="@color/colorOnPrimary"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/tvExtraOffer"
+        app:layout_constraintTop_toTopOf="@+id/textView16" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="20dp"
+        android:text="@string/total_price"
+        android:textColor="@color/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/textView16"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+
+    <TextView
+        android:id="@+id/tvTotalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="500"
+        android:textColor="@color/colorOnPrimary"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/tvquantity"
+        app:layout_constraintTop_toTopOf="@+id/textView20" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="20dp"
+        android:text="@string/purchase_time"
+        android:textColor="@color/colorOnPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/textView20"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+    <TextView
+        android:id="@+id/tvPurchaseTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="20-Apr-2021, 7:16:57 pm"
+        android:textColor="@color/colorOnPrimary"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/tvTotalPrice"
+        app:layout_constraintTop_toTopOf="@+id/textView21" />
+
+    <Button
+        android:id="@+id/btnphOK"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/colorOnPrimary"
+        android:text="@string/ok"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

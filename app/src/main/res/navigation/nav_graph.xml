@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/languageSelector">
+
+    <fragment
+        android:id="@+id/registerRoleSelector"
+        android:name="com.example.storelocator.login_register.register.RegisterRoleSelector"
+        android:label="@string/register_as"
+        tools:layout="@layout/fragment_register_role_selector">
+        <action
+            android:id="@+id/action_registerRoleSelector_to_customerRegisterFragment"
+            app:destination="@id/customerStoreRegister" />
+        <action
+            android:id="@+id/action_registerRoleSelector_to_sellerRegisterFragment"
+            app:destination="@id/sellerRegistrationFragment" />
+        <action
+            android:id="@+id/action_registerRoleSelector_to_storeLogin"
+            app:destination="@id/storeLogin"
+            app:popUpTo="@id/storeLogin" />
+    </fragment>
+    <fragment
+        android:id="@+id/customerStoreRegister"
+        android:name="com.example.storelocator.login_register.register.customer.CustomerRegisterFragment"
+        android:label="@string/customer_registration"
+        tools:layout="@layout/fragment_customer_register">
+
+
+        <action
+            android:id="@+id/action_customerStoreRegister_to_customerLocationFragment"
+            app:destination="@id/customerLocationFragment" />
+        <action
+            android:id="@+id/action_customerStoreRegister_to_registerRoleSelector"
+            app:destination="@id/registerRoleSelector" />
+    </fragment>
+    <fragment
+        android:id="@+id/storeLogin"
+        android:name="com.example.storelocator.login_register.login.LoginFragment"
+        android:label="@string/Store_Login"
+        tools:layout="@layout/fragment_store_login">
+        <action
+            android:id="@+id/action_storeLogin_to_registerRoleSelector"
+            app:destination="@id/registerRoleSelector" />
+        <action
+            android:id="@+id/action_storeLogin_to_languageSelector"
+            app:destination="@id/languageSelector"
+            app:popUpTo="@id/languageSelector" />
+        <argument
+            android:name="language"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/languageSelector"
+        android:name="com.example.storelocator.login_register.languageselector.LanguageSelector"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_language_selector">
+        <action
+            android:id="@+id/action_languageSelector_to_storeLogin"
+            app:destination="@id/storeLogin" />
+    </fragment>
+    <fragment
+        android:id="@+id/sellerRegistrationFragment"
+        android:name="com.example.storelocator.login_register.register.seller.one.SellerRegistrationFragment"
+        android:label="@string/Seller_Registration"
+        tools:layout="@layout/fragment_seller_register" >
+        <action
+            android:id="@+id/action_sellerRegistrationFragment_to_sellerRegistrationTwoFragment"
+            app:destination="@id/sellerRegistrationTwoFragment" />
+        <action
+            android:id="@+id/action_sellerRegistrationFragment_to_registerRoleSelector"
+            app:destination="@id/registerRoleSelector"
+            app:popUpTo="@id/registerRoleSelector" />
+    </fragment>
+    <fragment
+        android:id="@+id/sellerRegistrationTwoFragment"
+        android:name="com.example.storelocator.login_register.register.seller.two.SellerRegistrationTwoFragment"
+        android:label="@string/Seller_Registration"
+        tools:layout="@layout/fragment_seller_register_two">
+        <action
+            android:id="@+id/action_sellerRegistrationTwoFragment_to_registerShopLocation"
+            app:destination="@id/registerShopLocation" />
+        <action
+            android:id="@+id/action_sellerRegistrationTwoFragment_to_sellerRegistrationFragment"
+            app:destination="@id/sellerRegistrationFragment"
+            app:popUpTo="@id/sellerRegistrationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerShopLocation"
+        android:name="com.example.storelocator.login_register.register.seller.two.RegisterShopLocation"
+        android:label="@string/Find_Shop_Location"
+        tools:layout="@layout/fragment_register_shop_location" />
+    <fragment
+        android:id="@+id/customerLocationFragment"
+        android:name="com.example.storelocator.login_register.register.customer.CustomerLocationFragment"
+        android:label="@string/Find_Your_Location"
+        tools:layout="@layout/fragment_customer_location">
+        <action
+            android:id="@+id/action_customerLocationActivity_to_customerStoreRegister"
+            app:destination="@id/customerStoreRegister"
+            app:popUpTo="@id/customerStoreRegister"/>
+    </fragment>
+</navigation>
